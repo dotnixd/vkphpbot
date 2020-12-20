@@ -1,0 +1,67 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "1266c95fefdeea8225ac0289b2cf1833",
+    "packages": [
+        {
+            "name": "digitalstars/simplevk",
+            "version": "v2.13.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/digitalstars/simplevk.git",
+                "reference": "5bf04712c6ce34cfa21d6fe7ad93212597cd0a1b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/digitalstars/simplevk/zipball/5bf04712c6ce34cfa21d6fe7ad93212597cd0a1b",
+                "reference": "5bf04712c6ce34cfa21d6fe7ad93212597cd0a1b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=5.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DigitalStar\\vk_api\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "ZeRoX",
+                    "email": "as234zx15@yandex.ru"
+                },
+                {
+                    "name": "Runnin",
+                    "email": "mr.kirilll12@mail.ru"
+                }
+            ],
+            "description": "Library for easy work with VK com api",
+            "support": {
+                "issues": "https://github.com/digitalstars/simplevk/issues",
+                "source": "https://github.com/digitalstars/simplevk/tree/master"
+            },
+            "time": "2020-08-27T17:14:54+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "ext-gd": "*"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
+}

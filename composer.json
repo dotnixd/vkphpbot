@@ -1,0 +1,6 @@
+{
+    "require": {
+        "digitalstars/simplevk": "^2.13",
+        "ext-gd": "*"
+    }
+}
