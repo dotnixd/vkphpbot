@@ -5,6 +5,7 @@
 
 require_once "./library/hash.php";
 require_once "./library/download.php";
+require_once "./library/chunk.php";
 
 function run($vk, $data) {
 
@@ -30,7 +31,7 @@ function run($vk, $data) {
     $text = "";
 
     foreach($msgs as $m) {
-        $text .= chunk_split($m->text, 32);
+        $text .= utf_chunk($m->text, 32);
     }
 
     $user = $vk->userInfo($id, ["fields" => "photo_200"]);
