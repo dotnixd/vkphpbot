@@ -30,7 +30,11 @@ function run($vk, $data) {
     $text = "";
 
     foreach($msgs as $m) {
-        $text .= $m->text . "\n";
+        $chunks = chunk_split($m->text, 32);
+
+        foreach($chunks as $ch) {
+            $text .= $ch . "\n";
+        }
     }
 
     $user = $vk->userInfo($id, ["fields" => "photo_200"]);
