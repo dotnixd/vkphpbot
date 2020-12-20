@@ -1,6 +1,7 @@
 {
     "require": {
         "digitalstars/simplevk": "^2.13",
-        "ext-gd": "*"
+        "ext-gd": "*",
+        "ext-mbstring": "*"
     }
 }
