@@ -14,10 +14,10 @@ function run($vk, $data) {
 
             $steve = imagecreatefrompng("./blobs/steve.png");
             $src = imagecreatefromjpeg($filename);
-            $out = imagecreatetruecolor(imagesx($src), imagesy($src) + 100);
+            $out = imagecreatetruecolor(1280, 770);
 
-            imagecopy($out, $src, 0, 0, 0, 0, imagesx($src), imagesy($src));
-            imagecopy($out, $steve, intval(imagesx($src) / 3), imagesy($out) - imagesy($steve), 0, 0, imagesx($steve), imagesy($steve));
+            imagecopyresized($out, $src, 0, 0, 0, 0, imagesx($src), imagesy($src), 1280, 720);
+            imagecopyresized($out, $steve, intval(imagesx($src) / 3), imagesy($out) - imagesy($steve), 0, 0, imagesx($steve), imagesy($steve), imagesx($steve) - 70, imagesy($steve) - 70);
 
             $hash = generateHash(40) . ".png";
 
