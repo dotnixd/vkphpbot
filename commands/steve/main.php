@@ -15,8 +15,6 @@ function run($vk, $data) {
             $out = imagecreatetruecolor(imagesx($steve), imagesy($steve));
             $src = imagecreatefromjpeg($filename);
 
-            imagerotate($src, 7);
-
             imagecopyresized($out, $src, 228, 49, 0, 0, 1007, 508, imagesx($src), imagesy($src));
             imagecopy($out, $steve, 0, 0, 0, 0, imagesx($steve), imagesy($steve));
 
