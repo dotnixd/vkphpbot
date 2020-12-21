@@ -16,7 +16,7 @@ function run($vk, $data) {
             $out = imagecreate(imagesx($src), imagesy($src) + 100);
 
             imagecopy($out, $src, 0, 0, 0, 0, imagesx($src), imagesy($src));
-            imagecopy($out, $steve, intval(imagesx($src) / 3), imagesy($out) - imagesy($steve), imagesx($steve), imagesy($steve));
+            imagecopy($out, $steve, intval(imagesx($src) / 3), imagesy($out) - imagesy($steve), 0, 0, imagesx($steve), imagesy($steve));
 
             imagepng($out, $filename);
 
