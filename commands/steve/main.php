@@ -18,7 +18,7 @@ function run($vk, $data) {
             imagecopyresized($out, $src, 228, 49, 0, 0, 1007, 508, imagesx($src), imagesy($src));
             imagecopy($out, $steve, 0, 0, 0, 0, imagesx($steve), imagesy($steve));
 
-            imagepng($out, $filename);
+            imagejpeg($out, $filename);
 
             $vk->sendImage($data->object->peer_id, $hash, ["message" => "= Ваша пикча ="]);
 
