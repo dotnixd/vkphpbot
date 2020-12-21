@@ -20,7 +20,7 @@ function run($vk, $data) {
 
             imagejpeg($out, $filename);
 
-            $vk->sendImage($data->object->peer_id, $hash, ["message" => "= Ваша пикча ="]);
+            $vk->sendImage($data->object->peer_id, $filename, ["message" => "= Ваша пикча ="]);
 
             unlink($filename);
             return;
