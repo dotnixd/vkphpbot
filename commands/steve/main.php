@@ -3,6 +3,7 @@
 
 <?php
 
+require_once "./library/hash.php";
 require_once "./library/download.php";
 
 function run($vk, $data) {
@@ -18,11 +19,14 @@ function run($vk, $data) {
             imagecopy($out, $src, 0, 0, 0, 0, imagesx($src), imagesy($src));
             imagecopy($out, $steve, intval(imagesx($src) / 3), imagesy($out) - imagesy($steve), 0, 0, imagesx($steve), imagesy($steve));
 
-            imagepng($out, $filename);
+            $hash = generateHash(40) . ".png";
 
-            $vk->sendImage($data->object->peer_id, $filename, ["message" => "= Ваша пикча ="]);
+            imagepng($out, $hash);
+
+            $vk->sendImage($data->object->peer_id, $hash, ["message" => "= Ваша пикча ="]);
 
             unlink($filename);
+            unlink($hash);
             return;
         }
     }
