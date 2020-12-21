@@ -3,7 +3,7 @@
 
 <?php
 
-require_once "./library/hash.php";
+require_once "./library/download.php";
 
 function run($vk, $data) {
     if($img = end($data->object->attachments)) {
